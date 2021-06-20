@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     $m=$id = mysqli_real_escape_string($conn, $_GET['id']);
 
     // make sql
-    $sql = "SELECT * FROM costumers WHERE id = $id";
+    $sql = "SELECT * FROM customers WHERE id = $id";
 
     // get the query result
     $result = mysqli_query($conn, $sql);
@@ -35,7 +35,7 @@ if(isset($_GET['id'])){
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 
-    <title>Document</title>
+    
 
 </head>
 <body>
@@ -71,9 +71,11 @@ if(isset($_GET['id'])){
         margin-left:500px;
         margin-bottom: 20px;
         border-radius: 5px;
+        
     }
-    a{
+    button a{
         text-decoration: none;
+        color:#fff;
     }
 </style>
 
@@ -89,7 +91,7 @@ if(isset($_GET['id'])){
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="costumers.php">List of costumers</a>
+              <a class="nav-link" href="Customers.php">List of Customers</a>
               <a class="nav-link" href="transaction.php">Transfer Money</a>
               <a class="nav-link" href="transaction_history.php">Transaction History</a>
               
@@ -103,9 +105,9 @@ if(isset($_GET['id'])){
 <h2>CUSTOMER DETAILS</h2>
 <div class="costumer_details">
 
-<h2>Name of the costumer:- <?php echo $one['name']; ?> </h2>
+<h2>Name of the Customers:- <?php echo $one['name']; ?> </h2>
 
-<h2>Email of the costumer:- <?php echo $one['email']; ?></h2>
+<h2>Email of the Customers:- <?php echo $one['email']; ?></h2>
 
 <h2>Account created on:- <?php echo  $one['time']; ?></h2>
 

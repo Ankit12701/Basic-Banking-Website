@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 
-    <title>Banking System</title>
+    
 </head>
 <body>
     
@@ -31,6 +31,9 @@ button{
     margin-top: 100px;
     margin-left:600px;
 }
+a{
+  text-decoration: none;
+}
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
@@ -42,7 +45,7 @@ button{
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="costumers.php">List of costumers</a>
+              <a class="nav-link" href="Customers.php">List of Customers</a>
               <a class="nav-link" href="transaction.php">Transfer Money</a>
               <a class="nav-link" href="transaction_history.php">Transaction History</a>
               

@@ -1,7 +1,7 @@
 <?php
 include('connect.php');
 
-// * write query for all costumers details
+// * write query for allCustomers details
 $sql_id=' SELECT  * FROM transactions';
 // * get the result set (set of rows)
 $res1 = mysqli_query($conn, $sql_id);
@@ -52,7 +52,7 @@ mysqli_close($conn);
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="costumers.php">List of costumers</a>
+              <a class="nav-link" href="Customers.php">List of Customers</a>
               <a class="nav-link" href="transaction.php">Transfer Money</a>
               <a class="nav-link" href="transaction_history.php">Transaction History</a>
               

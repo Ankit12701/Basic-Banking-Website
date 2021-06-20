@@ -1,8 +1,8 @@
 <?php
 include('connect.php');
 
-// * write query for all costumers details
-$sql_id=' SELECT  * FROM costumers';
+// * write query for all Customers details
+$sql_id=' SELECT  * FROM Customers';
 // * get the result set (set of rows)
 $res1 = mysqli_query($conn, $sql_id);
 // * fetch the resulting rows as an array
@@ -53,7 +53,7 @@ mysqli_close($conn);
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="costumers.php">List of costumers</a>
+              <a class="nav-link" href="Customers.php">List of Customers</a>
               <a class="nav-link" href="transaction.php">Transfer Money</a>
               <a class="nav-link" href="transaction_history.php">Transaction History</a>
               
@@ -64,7 +64,7 @@ mysqli_close($conn);
 
 <h1>THE SPARKLE BANK </h1>
 
-<h2>Costumer Details</h2>
+<h2>Customers Details</h2>
 <?php   $i=0;  ?>
 <table class="table table-dark table-striped table-hover table_custom">
 

@@ -2,8 +2,8 @@
 <?php
 include('connect.php');
 
-// * write query for all costumers details
-$sql_id=' SELECT  * FROM costumers';
+// * write query for all Customers details
+$sql_id=' SELECT  * FROM Customers';
 // * get the result set (set of rows)
 $res1 = mysqli_query($conn, $sql_id);
 // * fetch the resulting rows as an array
@@ -36,7 +36,7 @@ if(isset($_GET['submit'])){
     
    
     // * fetching all details of sender 
-    $sender_det=" SELECT * FROM costumers where id=$sender";
+    $sender_det=" SELECT * FROM Customers where id=$sender";
 
     $sender_details=mysqli_query($conn,$sender_det);
 
@@ -46,7 +46,7 @@ if(isset($_GET['submit'])){
     
     // * fetching all details of receiver
 
-    $receiver_det=" SELECT * FROM costumers where id=$receiver";
+    $receiver_det=" SELECT * FROM Customers where id=$receiver";
 
     $receiver_details=mysqli_query($conn,$receiver_det);
 
@@ -91,8 +91,8 @@ if(isset($_GET['submit'])){
         $temp_bal2=$receiver1['current_balance'];
 
         // * queries to update the values in the database
-        $sql1="UPDATE costumers SET current_balance=$temp_bal1 WHERE id=$temp_id1 ";
-        $sql2="UPDATE costumers SET current_balance=$temp_bal2 WHERE id=$temp_id2 ";
+        $sql1="UPDATE Customers SET current_balance=$temp_bal1 WHERE id=$temp_id1 ";
+        $sql2="UPDATE Customers SET current_balance=$temp_bal2 WHERE id=$temp_id2 ";
         
         // * saving changes in the database
         if(mysqli_query($conn, $sql1)){
@@ -143,7 +143,7 @@ if(isset($_GET['submit'])){
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
 
-    <title>Banking System</title>
+    
 </head>
 <body>
 
@@ -194,7 +194,7 @@ h2{
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              <a class="nav-link" href="costumers.php">List of costumers</a>
+              <a class="nav-link" href="Customers.php">List of Customers</a>
               <a class="nav-link" href="transaction.php">Transfer Money</a>
               <a class="nav-link" href="transaction_history.php">Transaction History</a>
               
@@ -206,7 +206,7 @@ h2{
 
 <h1>THE SPARKLE BANK </h1>
 
-<h2>please fll this form to perform any transaction</h2>
+<h2>please fill this form to perform any transaction</h2>
 
 
 
